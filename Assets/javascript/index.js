@@ -10,7 +10,6 @@ var gameStats = {
     total: 0
 }
 
-
 playStatus = confirm('Do you want to play rock, paper, scissors?');
 
 while (playStatus) {
@@ -22,17 +21,17 @@ while (playStatus) {
     compSelection = rPS[getRandomInt(3)];
 
     if (userSelection === compSelection) {
-        //tie
+        // tie
         gameStats.ties += 1;
         alert('A tie... That\'s boring.\nComputer selected: ' + compSelection);
     } else if ((userSelection === 'R' && compSelection === 'P') || 
     (userSelection === 'P' && compSelection === 'S') ||
     (userSelection === 'S' && compSelection === 'R')) {
-        //you lose
+        // you lose
         gameStats.losses += 1;
         alert('You lost, bummer friend.\nComputer selected: ' + compSelection);
     } else {
-        //you win
+        // you win
         gameStats.wins += 1;
         alert('You won! You\'re a modern champion.\nComputer selected: ' + compSelection);
     }
@@ -41,8 +40,6 @@ while (playStatus) {
     alert('Game Statistics:\nWins: ' + gameStats.wins + '\nLosses: ' + gameStats.losses + '\nTies: ' + gameStats.ties + '\nTotal Games: '+ gameStats.total);
     playStatus = confirm('Do you want to play another game of rock, paper, scissors?');
 }
-
-
 
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
