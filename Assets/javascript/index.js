@@ -22,20 +22,20 @@ while (playStatus) {
 
     if (userSelection === compSelection) {
         // tie
-        gameStats.ties += 1;
+        gameStats.ties++;
         alert('A tie... That\'s boring.\nComputer selected: ' + compSelection);
     } else if ((userSelection === 'R' && compSelection === 'P') || 
     (userSelection === 'P' && compSelection === 'S') ||
     (userSelection === 'S' && compSelection === 'R')) {
         // you lose
-        gameStats.losses += 1;
+        gameStats.losses++;
         alert('You lost, bummer friend.\nComputer selected: ' + compSelection);
     } else {
         // you win
-        gameStats.wins += 1;
+        gameStats.wins++;
         alert('You won! You\'re a modern champion.\nComputer selected: ' + compSelection);
     }
-    gameStats.total += 1;
+    gameStats.total++;
 
     alert('Game Statistics:\nWins: ' + gameStats.wins + '\nLosses: ' + gameStats.losses + '\nTies: ' + gameStats.ties + '\nTotal Games: '+ gameStats.total);
     playStatus = confirm('Do you want to play another game of rock, paper, scissors?');
